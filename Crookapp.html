@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #slideholder {
+            height:300px;
+            width: 300px;
+            border:0px solid #000000;
+        }
+
+        #slideholder2 {
+            height:300px;
+            width: 300px;
+            border:0px solid #000000;
+        }
+
+        #slideholder3 {
+            height:300px;
+            width: 300px;
+            border:0px solid #000000;
+        }
+    </style>
+</head>
+<body>
+
+<div id="slideholder"></div>
+<div id="slideholder2"></div>
+<div id="slideholder3"></div>
+<script>
+    var plaatjes = [1,2,3,4];
+    var teller =0;
+    var slideholder = document.getElementById("slideholder");
+    slideholder.style.backgroundImage = "url('img/hoofd1.jpg')";
+    slideholder.addEventListener("click", function() {
+        getHoofd();
+        slideholder.style.backgroundImage = "url('img/hoofd" + getHoofd() + ".jpg')";
+    });
+    function getHoofd() {
+        if (teller >= plaatjes.length) {
+            teller = 1;
+        } else  {
+            teller++;
+        }
+        return(teller);
+    }
+
+    var plaatjes2 = [1,2,3,4];
+    var teller2 =0;
+    var slideholder2 = document.getElementById("slideholder2");
+    slideholder2.style.backgroundImage = "url('img/ogen1.jpg')";
+    slideholder2.addEventListener("click", function() {
+        getOgen();
+        slideholder2.style.backgroundImage = "url('img/ogen" + getOgen() + ".jpg')";
+    });
+    function getOgen() {
+        if (teller2 >= plaatjes2.length) {
+            teller2 = 1;
+        } else  {
+            teller2++;
+        }
+        return(teller2);
+    }
+
+    var plaatjes3 = [1,2,3,4];
+    var teller3 =0;
+    var slideholder3 = document.getElementById("slideholder3");
+    slideholder3.style.backgroundImage = "url('img/kin1.jpg')";
+    slideholder3.addEventListener("click", function() {
+        getKin();
+        slideholder3.style.backgroundImage = "url('img/kin" + getKin() + ".jpg')";
+    });
+    function getKin() {
+        if (teller3 >= plaatjes3.length) {
+            teller3 = 1;
+        } else  {
+            teller3++;
+        }
+        return(teller3);
+    }
+</script>
+
+<!--<script src="/Imageslider.js"></script>-->
+</body>
+</html>
